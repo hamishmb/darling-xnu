@@ -29,7 +29,7 @@ long sys_ulock_wait(uint32_t operation, void* addr, uint64_t value, uint32_t tim
 
 	if (timeout > 0)
 	{
-		ts.tv_sec = timeout / 1000*1000;
+		ts.tv_sec = timeout / (1000*1000);
 		ts.tv_nsec = (timeout % (1000*1000)) * 1000;
 	}
 
